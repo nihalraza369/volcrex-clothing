@@ -126,7 +126,12 @@ export default function ProductDetail({
                     if (i === 0) {
                       const img = e.target as HTMLImageElement;
                       if (img.naturalWidth > 0 && img.naturalHeight > 0) {
-                        setGalleryRatio(`${img.naturalWidth} / ${img.naturalHeight}`);
+                        const ratio = img.naturalWidth / img.naturalHeight;
+                        setGalleryRatio(
+                          ratio >= 1
+                            ? `${img.naturalWidth} / ${img.naturalHeight}`
+                            : "3 / 4"
+                        );
                       }
                     }
                   }}
