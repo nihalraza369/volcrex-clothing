@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingBag, Menu, X } from "lucide-react";
@@ -20,11 +21,15 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur-md border-b border-ink/10">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex flex-col leading-none">
-            <span className="font-display text-2xl md:text-3xl tracking-wide text-ink">
-              VOLCREX
-            </span>
-      
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/volwebsitelogo.png"
+              alt="Volcrex"
+              width={1536}
+              height={1024}
+              priority
+              className="h-20 md:h-20 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-10">

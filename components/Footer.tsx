@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import StitchDivider from "./StitchDivider";
 
 export default function Footer() {
@@ -8,7 +9,13 @@ export default function Footer() {
         <StitchDivider variant="dark" className="opacity-20 mb-14" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2">
-            <div className="font-display text-3xl tracking-wide">VOLCREX</div>
+            <Image
+              src="/volwebsitelogo.png"
+              alt="Volcrex"
+              width={1536}
+              height={1024}
+              className="h-10 md:h-12 w-auto brightness-0 invert"
+            />
             <p className="text-smoke text-sm max-w-xs leading-relaxed">
               Shirts cut for Karachi — from Tariq Road fittings to boardroom mornings.
               Monochrome by choice, tailored by habit.

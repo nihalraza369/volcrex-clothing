@@ -43,7 +43,7 @@ export default function Hero() {
             variants={item}
             className="label-tag text-smoke/80 tracking-widest2 uppercase block mb-8"
           >
-            Bespoke Shirts — Karachi
+            Bespoke Shirts — All
           </motion.span>
 
           <motion.h1
