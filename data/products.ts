@@ -2,7 +2,7 @@ export type Product = {
   id: string;
   slug: string;
   name: string;
-  category: "Formal" | "Casual" | "Linen" | "Kurta Collar" | "Denim";
+  category: "Formal" | "Casual" | "Linen" | "Cr7" | "Onepiece" | "Volcrex" ;
   price: number;
   compareAtPrice?: number;
   fabric: string;
@@ -46,4 +46,4 @@ export const products: Product[] = [
   { id: "10", slug: "linen-summer-breeze-2", name: "Linen Summer Breeze", category: "Linen", price: 4590, fabric: "100% Linen", fit: "Relaxed Fit", colors: ["Black", "Gray", "Red", "Blue", "Green", "Brown"], sizes: ["S","M","L","XL"], image: "/card10/1image10black.jpg", images: ["/card10/1image10black.jpg", "/card10/2image10black.jpg", "/card10/3image10gray.jpg", "/card10/4image10gray.jpg", "/card10/5image10red.jpg","/card10/6image10red.jpg","/card10/7image10blue.jpg","/card10/8image10blue.jpg","/card10/9image10green.jpg","/card10/10image10green.jpg","/card10/11image10brown.jpg","/card10/12image10brown.jpg"], description: "Breezy linen for Karachi summers. Unlined, unstructured, and unapologetically casual." },
 ];
 
-export const categories = ["All", "Formal", "Casual", "Linen", "Kurta Collar", "Denim"] as const;
+export const categories = ["All", "Formal", "Casual", "Linen", "Cr7", "Onepiece", "Volcrex"] as const;
