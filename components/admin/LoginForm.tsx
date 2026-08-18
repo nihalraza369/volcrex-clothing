@@ -41,7 +41,7 @@ export default function LoginForm() {
     <div className="min-h-screen bg-ink flex items-center justify-center px-5">
       <div className="w-full max-w-md">
         <div className="mb-10 text-center">
-          <p className="label-tag text-smoke">Oura Sartoria</p>
+          <p className="label-tag text-smoke">Expert Bridal Dress</p>
           <h1 className="font-display text-4xl md:text-5xl text-paper mt-3 tracking-wide">
             Admin Studio
           </h1>

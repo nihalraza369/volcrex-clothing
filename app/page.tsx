@@ -44,7 +44,7 @@ export default async function Home() {
                   />
                 )}
                 <div className="absolute inset-0 bg-ink/30 group-hover:bg-ink/45 transition-colors" />
-                <span className="absolute bottom-4 left-4 label-tag text-paper">{cat}</span>
+                <span className="absolute bottom-4 left-4 label-tag text-white">{cat}</span>
               </Link>
             );
           })}
@@ -77,14 +77,14 @@ export default async function Home() {
 
       {/* Brand statement */}
       <section className="mx-auto max-w-4xl px-5 md:px-10 text-center pb-8">
-        <span className="label-tag text-ash">The Sartoria Standard</span>
+        <span className="label-tag text-ash">The Expert Bridal Dress Standard</span>
         <p className="font-display text-3xl md:text-5xl mt-6 leading-tight">
-          No colour to distract you. Just fabric, fit, and a stitch that holds.
+          No compromise on elegance. Just fabric, fit, and a stitch that holds.
         </p>
         <p className="text-ash mt-6 max-w-xl mx-auto leading-relaxed">
-          Every Oura shirt is made in black, white, and the shades between —
-          so the only decision left is which one fits your day.
-          Cash on Delivery accepted across Karachi.
+          Every Expert Bridal Dress piece is crafted for your special day —
+          Sharara, Gharara, Lehnga, Sarhee, and Party Wear delivered across Pakistan.
+          Cash on Delivery accepted.
         </p>
       </section>
     </main>

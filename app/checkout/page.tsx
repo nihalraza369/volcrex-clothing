@@ -8,9 +8,10 @@ import StitchDivider from "@/components/StitchDivider";
 
 type PaymentMethod = "cod";
 
-const KARACHI_AREAS = [
-  "Clifton", "DHA", "Gulshan-e-Iqbal", "North Nazimabad", "PECHS",
-  "Bahadurabad", "Malir", "Korangi", "Saddar", "Gulistan-e-Johar", "Other",
+const PAKISTAN_CITIES = [
+  "Karachi", "Lahore", "Islamabad", "Rawalpindi", "Faisalabad",
+  "Multan", "Peshawar", "Quetta", "Hyderabad", "Sialkot",
+  "Gujranwala", "Bahawalpur", "Sargodha", "Sukkur", "Abbottabad", "Other",
 ];
 
 export default function CheckoutPage() {
@@ -19,7 +20,7 @@ export default function CheckoutPage() {
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [area, setArea] = useState(KARACHI_AREAS[0]);
+  const [city, setCity] = useState(PAKISTAN_CITIES[0]);
   const [address, setAddress] = useState("");
   const [method, setMethod] = useState<PaymentMethod>("cod");
   const [loading, setLoading] = useState(false);
@@ -32,7 +33,7 @@ export default function CheckoutPage() {
     return (
       <main className="mx-auto max-w-2xl px-5 pt-24 pb-32 text-center">
         <h1 className="font-display text-4xl">Your bag is empty</h1>
-        <p className="text-ash mt-3">Add a shirt before checking out.</p>
+        <p className="text-ash mt-3">Add an item before checking out.</p>
       </main>
     );
   }
@@ -58,7 +59,7 @@ export default function CheckoutPage() {
         body: JSON.stringify({
           amount: total,
           paymentMethod: method,
-          customer: { name, phone, address: `${address}, ${area}, Karachi` },
+          customer: { name, phone, address: `${address}, ${city}` },
           items: items.map((i) => ({
             name: i.product.name,
             size: i.size,
@@ -129,12 +130,12 @@ export default function CheckoutPage() {
                 className="border border-ink/20 px-4 py-3 text-sm focus:outline-none focus:border-ink"
               />
               <select
-                value={area}
-                onChange={(e) => setArea(e.target.value)}
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
                 className="border border-ink/20 px-4 py-3 text-sm focus:outline-none focus:border-ink bg-paper"
               >
-                {KARACHI_AREAS.map((a) => (
-                  <option key={a} value={a}>{a}</option>
+                {PAKISTAN_CITIES.map((c) => (
+                  <option key={c} value={c}>{c}</option>
                 ))}
               </select>
               <textarea
@@ -215,7 +216,7 @@ export default function CheckoutPage() {
               {items.map((item, i) => (
                 <li key={i} className="flex justify-between text-sm">
                   <span className="text-ash">
-                    {item.product.name} ({item.color}, {item.size}) × {item.quantity}
+                    {item.product.name} (Size {item.size}) × {item.quantity}
                   </span>
                   <span>Rs {(item.product.price * item.quantity).toLocaleString()}</span>
                 </li>
@@ -226,7 +227,7 @@ export default function CheckoutPage() {
               <span>Rs {subtotal.toLocaleString()}</span>
             </div>
             <div className="flex justify-between text-sm mb-4">
-              <span className="text-ash">Delivery (Karachi)</span>
+              <span className="text-ash">Delivery (Pakistan)</span>
               <span>Rs {delivery}</span>
             </div>
             <div className="border-t border-ink/10 pt-4 flex justify-between items-baseline">

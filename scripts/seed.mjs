@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Oura Sartoria — seed script
+ * Velcrox — seed script
  *
  * `data/products.ts` ke existing products ko Supabase products table mein
  * insert/upsert karta hai. Taake admin dashboard mein pehle se wahi

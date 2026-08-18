@@ -16,13 +16,13 @@ html {
 }
 
 body {
-  background-color: #FAF9F6;
-  color: #0A0A0A;
+  background-color: #FFFFFF;
+  color: #181818;
 }
 
 ::selection {
-  background-color: #0A0A0A;
-  color: #FAF9F6;
+  background-color: #D4A017;
+  color: #FFFFFF;
 }
 
 /* Signature stitch line — drawn like a tailor's basting thread */
@@ -54,10 +54,10 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF9F6;
+  background: #FFFFFF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0A0A0A;
+  background: #D4A017;
 }
 
 /* Hide scrollbar for image gallery */

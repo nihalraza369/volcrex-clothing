@@ -1,5 +1,5 @@
 -- =============================================================
--- Oura Sartoria — Supabase schema
+-- Velcrox — Supabase schema
 --
 -- Isay apne Supabase project ke SQL Editor mein paste karke RUN karo.
 -- Iske baad `npm run seed` chala kar existing products database mein

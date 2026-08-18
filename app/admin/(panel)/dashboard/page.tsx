@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getProducts } from "@/lib/products-repo";
 import { categories } from "@/data/products";
 import { isSupabaseConfigured } from "@/lib/supabase";
-import { Shirt, Layers, Wallet, Sparkles, Plus, ArrowUpRight, type LucideIcon } from "lucide-react";
+import { Layers, Wallet, Sparkles, Plus, ArrowUpRight, type LucideIcon } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -80,14 +80,14 @@ export default async function AdminDashboardPage() {
       )}
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard icon={Shirt} label="Total Products" value={String(products.length)} />
+        <StatCard icon={Layers} label="Total Products" value={String(products.length)} />
         <StatCard icon={Sparkles} label="New Arrivals" value={String(newCount)} />
         <StatCard icon={Wallet} label="Avg Price" value={fmt(avg)} />
         <StatCard
           icon={Layers}
           label="Collection Value"
           value={fmt(totalValue)}
-          sub={`${products.length} shirts`}
+          sub={`${products.length} dresses`}
         />
       </div>
 

@@ -38,7 +38,7 @@ export default function CartDrawer() {
               {items.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-center gap-3">
                   <p className="font-display text-2xl">Your bag is empty</p>
-                  <p className="text-ash text-sm">Nothing tailored yet — go pick a shirt.</p>
+                  <p className="text-ash text-sm">Nothing here yet — go pick an outfit.</p>
                   <Link
                     href="/shop"
                     onClick={() => setCartOpen(false)}
@@ -65,7 +65,7 @@ export default function CartDrawer() {
                           <div>
                             <p className="font-body text-sm font-medium">{item.product.name}</p>
                             <p className="text-xs text-ash mt-0.5">
-                              {item.color} · {item.size}
+                              Size {item.size}
                             </p>
                           </div>
                           <button onClick={() => removeItem(index)} aria-label="Remove item">
@@ -107,7 +107,7 @@ export default function CartDrawer() {
                   <span className="label-tag">Subtotal</span>
                   <span className="font-display text-2xl">Rs {subtotal.toLocaleString()}</span>
                 </div>
-                <p className="text-xs text-ash mb-4">Shipping calculated at checkout. Karachi delivery only.</p>
+                <p className="text-xs text-ash mb-4">Shipping calculated at checkout. Pakistan-wide delivery.</p>
                 <Link
                   href="/checkout"
                   onClick={() => setCartOpen(false)}

@@ -28,7 +28,7 @@ export default function ContactPage() {
           <input required type="text" placeholder="Name" className="border border-ink/20 px-4 py-3 text-sm focus:outline-none focus:border-ink" />
           <input required type="tel" placeholder="Phone Number" className="border border-ink/20 px-4 py-3 text-sm focus:outline-none focus:border-ink" />
           <textarea required placeholder="Your message" rows={5} className="border border-ink/20 px-4 py-3 text-sm focus:outline-none focus:border-ink" />
-          <button type="submit" className="bg-ink text-paper py-4 label-tag hover:bg-graphite transition-colors">
+          <button type="submit" className="bg-ink text-white py-4 label-tag hover:bg-graphite transition-colors">
             Send Message
           </button>
         </form>
@@ -37,15 +37,19 @@ export default function ContactPage() {
       <div className="mt-14 grid sm:grid-cols-3 gap-8 text-sm">
         <div>
           <span className="label-tag text-ash block mb-2">Location</span>
-          <span>Karachi, Pakistan</span>
+          <span>Paradise Garment Center</span>
+          <span className="block text-ash mt-1">Shop 4, Abdullah Haroon Rd</span>
+          <span className="block text-ash">Saddar Artillery Maidan, Karachi 75260</span>
         </div>
         <div>
-          <span className="label-tag text-ash block mb-2">Delivery Area</span>
-          <span>Karachi only, for now</span>
+          <span className="label-tag text-ash block mb-2">Phone</span>
+          <span>0345 2424248</span>
         </div>
         <div>
-          <span className="label-tag text-ash block mb-2">Payments Accepted</span>
-          <span>Cash on Delivery</span>
+          <span className="label-tag text-ash block mb-2">Hours</span>
+          <span>Tuesday – Saturday: 11am – 9pm</span>
+          <span className="block text-ash mt-1">Sunday: Closed</span>
+          <span className="block text-ash">Monday: 11am – 9pm</span>
         </div>
       </div>
     </main>

@@ -6,7 +6,7 @@ import { useRef } from "react";
 /**
  * The signature element: a single basting-stitch thread that draws itself
  * across the page whenever it scrolls into view. It's the one recurring
- * motif tying every section back to "Sartoria" — the tailor's atelier.
+ * motif tying every section back to "Expert Bridal Dress" — the label at the collar.
  */
 export default function StitchDivider({
   className = "",
@@ -17,7 +17,7 @@ export default function StitchDivider({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
-  const stroke = variant === "dark" ? "#FAF9F6" : "#0A0A0A";
+  const stroke = variant === "dark" ? "#FFFFFF" : "#D4A017";
 
   return (
     <div ref={ref} className={`w-full ${className}`}>

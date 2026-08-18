@@ -1,51 +1,50 @@
 import Link from "next/link";
-import Image from "next/image";
 import StitchDivider from "./StitchDivider";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-paper mt-32">
+    <footer className="bg-ink text-white mt-32">
       <div className="mx-auto max-w-7xl px-5 md:px-10 pt-16 pb-10">
         <StitchDivider variant="dark" className="opacity-20 mb-14" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2">
-            <Image
-              src="/volwebsitelogo.png"
-              alt="Volcrex"
-              width={1536}
-              height={1024}
-              className="h-10 md:h-12 w-auto brightness-0 invert"
-            />
-            <p className="text-smoke text-sm max-w-xs leading-relaxed">
-              Shirts cut for Karachi — from Tariq Road fittings to boardroom mornings.
-              Monochrome by choice, tailored by habit.
+            <span className="font-display text-3xl tracking-[0.15em] uppercase">
+              Expert Bridal Dress
+            </span>
+            <p className="text-white/70 text-sm max-w-xs leading-relaxed mt-2">
+              Bridal shop in Karachi — Sharara, Gharara, Lehnga, Sarhee, and
+              Party Wear. Located at Paradise Garment Center, Saddar.
             </p>
           </div>
 
           <div>
-            <div className="label-tag text-smoke mb-4">Shop</div>
+            <div className="label-tag text-white/70 mb-4">Shop</div>
             <ul className="flex flex-col gap-3 text-sm">
-              <li><Link href="/shop" className="hover:text-smoke transition-colors">All Shirts</Link></li>
-              <li><Link href="/shop?category=Formal" className="hover:text-smoke transition-colors">Formal</Link></li>
-              <li><Link href="/shop?category=Linen" className="hover:text-smoke transition-colors">Linen</Link></li>
-              <li><Link href="/shop?category=Kurta Collar" className="hover:text-smoke transition-colors">Kurta Collar</Link></li>
+              <li><Link href="/shop" className="hover:text-white transition-colors">All Dresses</Link></li>
+              <li><Link href="/shop?category=Sharara" className="hover:text-white transition-colors">Sharara</Link></li>
+              <li><Link href="/shop?category=Gharara" className="hover:text-white transition-colors">Gharara</Link></li>
+              <li><Link href="/shop?category=Lehnga" className="hover:text-white transition-colors">Lehnga</Link></li>
+              <li><Link href="/shop?category=Sarhee" className="hover:text-white transition-colors">Sarhee</Link></li>
+              <li><Link href="/shop?category=Party%20Wear" className="hover:text-white transition-colors">Party Wear</Link></li>
             </ul>
           </div>
 
           <div>
-            <div className="label-tag text-smoke mb-4">Support</div>
+            <div className="label-tag text-white/70 mb-4">Visit Us</div>
             <ul className="flex flex-col gap-3 text-sm">
-              <li><Link href="/contact" className="hover:text-smoke transition-colors">Contact Us</Link></li>
-              <li><Link href="/about" className="hover:text-smoke transition-colors">About the Atelier</Link></li>
-              <li className="text-smoke">Karachi, Pakistan</li>
-              <li className="text-smoke">Delivery: Karachi only</li>
+              <li className="text-white/70">Paradise Garment Center</li>
+              <li className="text-white/70">Shop 4, Abdullah Haroon Rd</li>
+              <li className="text-white/70">Saddar Artillery Maidan, Karachi</li>
+              <li className="text-white/70">0345 2424248</li>
+              <li className="text-white/70">Tue–Sat: 11am–9pm</li>
+              <li className="text-white/70">Sunday: Closed</li>
             </ul>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-14 pt-6 border-t border-paper/10 gap-2">
-          <p className="text-xs text-ash">© {new Date().getFullYear()} Oura Sartoria. All rights reserved.</p>
-          <p className="text-xs text-ash">Cash on Delivery</p>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-14 pt-6 border-t border-white/10 gap-2">
+          <p className="text-xs text-white/50">© {new Date().getFullYear()} Expert Bridal Dress. All rights reserved.</p>
+          <p className="text-xs text-white/50">Cash on Delivery</p>
         </div>
       </div>
     </footer>

@@ -103,7 +103,7 @@ export function buildEasypaisaPayload(order: OrderInput) {
       orderRefNum: order.orderId,
       merchantHashedReq: hash,
       expiryDate: formatDateTime(new Date(Date.now() + 60 * 60 * 1000)),
-      merchantName: "Oura Sartoria",
+      merchantName: "Expert Bridal Dress",
     },
   };
 }
@@ -116,7 +116,7 @@ function formatDateTime(d: Date) {
 }
 
 export function generateOrderId() {
-  return `OURA-${Date.now().toString(36).toUpperCase()}-${Math.floor(
+  return `EBD-${Date.now().toString(36).toUpperCase()}-${Math.floor(
     Math.random() * 1000
   )}`;
 }

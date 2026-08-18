@@ -304,7 +304,7 @@ export default function ProductForm({ mode, initial }: Props) {
           onChange={(e) => setDescription(e.target.value)}
           rows={4}
           className={inputClass}
-          placeholder="Shirt ki tafseel..."
+          placeholder="Dress ki tafseel..."
         />
       </div>
 

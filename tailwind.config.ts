@@ -8,14 +8,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0A0A0A",
+        ink: "#D4A017",
         charcoal: "#181818",
-        graphite: "#2E2E2E",
+        graphite: "#B8860B",
         ash: "#6B6B6B",
         smoke: "#B8B8B8",
-        chalk: "#E9E7E2",
-        paper: "#FAF9F6",
-        bone: "#FFFFFF",
+        chalk: "#FDF8E8",
+        paper: "#FFFFFF",
+        bone: "#FFFEF7",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],

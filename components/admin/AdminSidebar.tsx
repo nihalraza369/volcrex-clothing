@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   LayoutDashboard,
-  Shirt,
+  Layers,
   Plus,
   Store,
   LogOut,
@@ -15,7 +15,7 @@ import {
 
 const LINKS = [
   { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/admin/products", label: "Products", icon: Shirt },
+  { href: "/admin/products", label: "Products", icon: Layers },
   { href: "/admin/products/new", label: "Add Product", icon: Plus },
   { href: "/", label: "View Shop", icon: Store },
 ];
@@ -40,7 +40,7 @@ export default function AdminSidebar() {
     <>
       {/* Mobile top bar */}
       <div className="md:hidden sticky top-0 z-30 bg-ink text-paper flex items-center justify-between px-5 h-16 border-b border-smoke/15">
-        <span className="font-display text-xl tracking-wide">OURA — ADMIN</span>
+        <span className="font-display text-xl tracking-wide">EXPERT BRIDAL — ADMIN</span>
         <button
           onClick={() => setOpen((o) => !o)}
           aria-label="Toggle menu"
@@ -58,7 +58,7 @@ export default function AdminSidebar() {
       >
         <div className="px-6 pt-8 pb-6 border-b border-smoke/10 hidden md:block">
           <p className="font-display text-2xl tracking-wide leading-none">
-            OURA
+            EXPERT BRIDAL
           </p>
           <p className="label-tag text-smoke text-[10px] mt-1">Admin Studio</p>
         </div>

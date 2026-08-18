@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
-import { notFound, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useCart } from "@/context/CartContext";
 import ProductCard from "@/components/ProductCard";
@@ -20,7 +20,6 @@ export default function ProductDetail({
   const { addItem } = useCart();
 
   const [size, setSize] = useState(product.sizes[0] ?? "");
-  const [color, setColor] = useState(product.colors[0] ?? "");
   const [added, setAdded] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [galleryRatio, setGalleryRatio] = useState<string | null>(null);
@@ -29,48 +28,14 @@ export default function ProductDetail({
 
   const gallery = product.images && product.images.length > 0 ? product.images : [product.image];
 
-  const KNOWN_COLORS = ["gray", "green", "brown", "blue", "red", "black", "white", "beige"];
-
-  const getColorKeyword = (color: string): string | null => {
-    const lower = color.toLowerCase();
-    return KNOWN_COLORS.find((k) => lower.includes(k)) ?? null;
-  };
-
-  const colorMatches = (color: string): number[] => {
-    const kw = getColorKeyword(color);
-    if (!kw) return [];
-    return gallery.reduce<number[]>((acc, src, i) => {
-      if (src.toLowerCase().includes(kw)) acc.push(i);
-      return acc;
-    }, []);
-  };
-
-  const selectedColorMatches = colorMatches(color);
-  const hasFrontBack = selectedColorMatches.length >= 2;
-  const frontIndex = selectedColorMatches[0] ?? -1;
-  const backIndex = selectedColorMatches[1] ?? -1;
-
-  useEffect(() => {
-    const matches = colorMatches(color);
-    if (matches.length > 0) {
-      setActiveIndex(matches[0]);
-      setTimeout(() => {
-        const container = scrollRef.current;
-        if (!container) return;
-        const child = container.children[matches[0]] as HTMLElement;
-        child?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
-      }, 50);
-    }
-  }, [color, gallery]);
-
   const handleAddToCart = () => {
-    addItem(product, size, color, 1);
+    addItem(product, size, "", 1);
     setAdded(true);
     setTimeout(() => setAdded(false), 1800);
   };
 
   const handleBuyNow = () => {
-    addItem(product, size, color, 1);
+    addItem(product, size, "", 1);
     router.push("/checkout");
   };
 
@@ -141,11 +106,6 @@ export default function ProductDetail({
                     New
                   </span>
                 )}
-                {hasFrontBack && (activeIndex === frontIndex || activeIndex === backIndex) && (
-                  <span className="absolute top-4 right-4 bg-paper/90 text-ink label-tag px-3 py-1 z-10 border border-ink/20">
-                    {activeIndex === backIndex ? "Back" : "Front"}
-                  </span>
-                )}
               </div>
             ))}
           </div>
@@ -174,7 +134,6 @@ export default function ProductDetail({
             </div>
           )}
 
-          {/* Scroll hint for single-image products */}
           {gallery.length > 1 && (
             <p className="text-center text-xs text-ash mt-3 label-tag tracking-wider">
               {activeIndex + 1} / {gallery.length}
@@ -213,46 +172,6 @@ export default function ProductDetail({
             </div>
           </div>
 
-            {product.colors.length > 0 && (
-            <div className="mt-8">
-            <span className="label-tag block mb-3">Colour — {color}</span>
-            <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-              {product.colors.map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setColor(c)}
-                  className={`px-3 sm:px-4 py-2 text-xs sm:text-sm border transition-colors whitespace-nowrap flex-none ${
-                    color === c ? "border-ink bg-ink text-paper" : "border-ink/20 hover:border-ink"
-                  }`}
-                >
-                  {c}
-                </button>
-              ))}
-            </div>
-
-            {hasFrontBack && (
-              <div className="mt-3 flex gap-2">
-                <button
-                  onClick={() => scrollToImage(frontIndex)}
-                  className={`flex-1 py-2.5 text-xs sm:text-sm label-tag border transition-colors ${
-                    activeIndex === frontIndex ? "border-ink bg-ink text-paper" : "border-ink/20 hover:border-ink"
-                  }`}
-                >
-                  Front
-                </button>
-                <button
-                  onClick={() => scrollToImage(backIndex)}
-                  className={`flex-1 py-2.5 text-xs sm:text-sm label-tag border transition-colors ${
-                    activeIndex === backIndex ? "border-ink bg-ink text-paper" : "border-ink/20 hover:border-ink"
-                  }`}
-                >
-                  Back
-                </button>
-              </div>
-            )}
-          </div>
-          )}
-
           <div className="mt-6">
             <span className="label-tag block mb-3">Size — {size}</span>
             <div className="flex flex-wrap gap-3">
@@ -286,7 +205,7 @@ export default function ProductDetail({
           </div>
 
           <p className="text-xs text-ash mt-4">
-            Cash on Delivery available. Karachi delivery in 2–4 business days.
+            Cash on Delivery available. Delivery in 2–5 business days across Pakistan.
           </p>
         </motion.div>
       </div>

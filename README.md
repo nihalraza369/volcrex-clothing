@@ -1,6 +1,6 @@
-# Oura Sartoria — Website
+# Velcrox — Website
 
-Karachi-based shirt brand ke liye Next.js + React website. Black & white theme,
+Pakistan-wide shirt brand ke liye Next.js + React website. Black & white theme,
 Framer Motion animations, product catalog (22 shirts), cart, aur JazzCash /
 EasyPaisa / Cash on Delivery checkout.
 
@@ -129,7 +129,7 @@ credentials nahi chahiye.
 
 - **Signature element:** Ek "stitch line" (tailor ki basting thread jaisi)
   animation jo scroll karte waqt draw hoti hai — har section ke darmiyan yehi
-  motif repeat hota hai, "Sartoria" (tailor's atelier) ke concept ko reflect
+  motif repeat hota hai, "Velcrox" brand ke concept ko reflect
   karne ke liye.
 - **Fonts:** Cormorant Garamond (headings, editorial feel) + Inter (body text,
   clean aur readable).
@@ -140,7 +140,7 @@ credentials nahi chahiye.
 - **Colours:** `tailwind.config.ts` mein `colors` object edit karo.
 - **Fonts:** `app/layout.tsx` mein font imports.
 - **Logo/Brand name:** `components/Navbar.tsx` aur `components/Footer.tsx` mein.
-- **Delivery areas:** `app/checkout/page.tsx` mein `KARACHI_AREAS` array.
+- **Delivery cities:** `app/checkout/page.tsx` mein `PAKISTAN_CITIES` array.
 - **Free delivery threshold:** Abhi Rs 5000+ pe free hai — `app/checkout/page.tsx`
   aur `app/cart/page.tsx` mein `subtotal >= 5000` search karo.
 

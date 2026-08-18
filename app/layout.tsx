@@ -21,9 +21,9 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Oura Sartoria — Shirts, Cut in Black & White",
+  title: "Expert Bridal Dress — Sharara, Gharara, Lehnga, Sarhee, Party Wear",
   description:
-    "Oura Sartoria is a Karachi-based shirt atelier. Formal, casual, linen, kurta-collar and denim shirts, delivered across Karachi with Cash on Delivery.",
+    "Expert Bridal Dress in Karachi. Bridal shop in Paradise Garment Center, Shop 4 Abdullah Haroon Rd, Saddar Artillery Maidan. Sharara, Gharara, Lehnga, Sarhee, and Party Wear.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

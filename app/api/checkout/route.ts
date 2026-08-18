@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
       const payload = buildJazzCashPayload({
         orderId,
         amount,
-        description: "Oura Sartoria order",
+        description: "Expert Bridal Dress order",
         returnUrl,
       });
 
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
       const payload = buildEasypaisaPayload({
         orderId,
         amount,
-        description: "Oura Sartoria order",
+        description: "Expert Bridal Dress order",
         returnUrl,
       });
 

@@ -15,7 +15,7 @@ export default function CartPage() {
       <main className="mx-auto max-w-3xl px-5 md:px-10 pt-24 pb-32 text-center">
         <span className="label-tag text-ash">Your Bag</span>
         <h1 className="font-display text-5xl mt-3">It&apos;s empty in here.</h1>
-        <p className="text-ash mt-4">Nothing tailored yet — go pick a shirt.</p>
+        <p className="text-ash mt-4">Nothing here yet — go pick an outfit.</p>
         <Link href="/shop" className="inline-block mt-8 bg-ink text-paper px-8 py-4 label-tag">
           Browse the Collection
         </Link>
@@ -48,7 +48,7 @@ export default function CartPage() {
                     <Link href={`/product/${item.product.slug}`} className="font-display text-xl hover:underline">
                       {item.product.name}
                     </Link>
-                    <p className="text-sm text-ash mt-1">{item.color} · Size {item.size}</p>
+                    <p className="text-sm text-ash mt-1">Size {item.size}</p>
                     <p className="text-sm text-ash">{item.product.fabric}</p>
                   </div>
                   <button onClick={() => removeItem(index)} aria-label="Remove item">
@@ -80,7 +80,7 @@ export default function CartPage() {
               <span>Rs {subtotal.toLocaleString()}</span>
             </div>
             <div className="flex justify-between text-sm mb-4">
-              <span className="text-ash">Delivery (Karachi)</span>
+              <span className="text-ash">Delivery (Pakistan)</span>
               <span>Rs 100</span>
             </div>
             <div className="border-t border-ink/10 pt-4 flex justify-between items-baseline mb-6">

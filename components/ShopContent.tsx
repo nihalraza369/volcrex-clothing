@@ -30,7 +30,7 @@ export default function ShopContent({ products }: { products: Product[] }) {
     <main className="mx-auto max-w-7xl px-5 md:px-10 pt-14 pb-24">
       <div className="mb-10">
         <span className="label-tag text-ash">Collection</span>
-        <h1 className="font-display text-5xl md:text-6xl mt-2">All Shirts</h1>
+        <h1 className="font-display text-5xl md:text-6xl mt-2">All Dresses</h1>
       </div>
 
       <StitchDivider className="mb-10 opacity-30" />
@@ -64,7 +64,7 @@ export default function ShopContent({ products }: { products: Product[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="text-ash text-center py-24">No shirts found in this category yet.</p>
+        <p className="text-ash text-center py-24">No dresses found in this category yet.</p>
       ) : (
         <motion.div
           layout

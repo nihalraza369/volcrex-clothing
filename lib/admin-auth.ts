@@ -18,7 +18,7 @@ export function getAdminPassword(): string {
 }
 
 function getSessionSecret(): string {
-  return process.env.ADMIN_SESSION_SECRET || "oura-sartoria-admin-secret";
+  return process.env.ADMIN_SESSION_SECRET || "expert-bridal-admin-secret";
 }
 
 export const SESSION_COOKIE = "admin_session";

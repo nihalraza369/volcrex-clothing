@@ -22,14 +22,19 @@ const item = {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image */}
+      {/* Background image — mobile */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url(/herobg.png)" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+        style={{ backgroundImage: "url(/herobgmobile.png)" }}
+      />
+      {/* Background image — desktop */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
+        style={{ backgroundImage: "url(/herobgmobile.png)" }}
       />
 
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-ink/55" />
+      {/* Yellow overlay for text readability */}
+      <div className="absolute inset-0 bg-ink/50" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-10 pt-24 pb-20 w-full">
@@ -41,26 +46,26 @@ export default function Hero() {
         >
           <motion.span
             variants={item}
-            className="label-tag text-smoke/80 tracking-widest2 uppercase block mb-8"
+            className="label-tag text-white/80 tracking-widest2 uppercase block mb-8"
           >
-            Bespoke Shirts — All
+            Expert Bridal Dress — Karachi
           </motion.span>
 
           <motion.h1
             variants={item}
-            className="font-display text-[14vw] leading-[0.88] md:text-[5.5vw] md:leading-[0.92] text-paper"
+            className="font-display text-[14vw] leading-[0.88] md:text-[5.5vw] md:leading-[0.92] text-white"
           >
-            Crafted in
+            Crafted for
             <br />
-            monochrome.
+            your special day.
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="mt-8 max-w-lg text-smoke/90 text-lg md:text-xl leading-relaxed font-light"
+            className="mt-8 max-w-lg text-white/90 text-lg md:text-xl leading-relaxed font-light"
           >
-            One thing, done exceptionally. Shirts built on fabric, fit, and an
-            uncompromising stitch line — nothing to hide behind.
+            Bridal elegance, redefined. Sharara, Gharara, Lehnga, Sarhee, and
+            Party Wear — designed to make every bride feel extraordinary.
           </motion.p>
 
           <motion.div
@@ -69,13 +74,13 @@ export default function Hero() {
           >
             <Link
               href="/shop"
-              className="bg-paper text-ink px-10 py-4 label-tag hover:bg-chalk transition-colors duration-300"
+              className="bg-white text-ink px-10 py-4 label-tag hover:bg-chalk transition-colors duration-300"
             >
               Explore Collection
             </Link>
             <Link
               href="/about"
-              className="label-tag text-paper/80 border-b border-paper/40 pb-1 hover:text-paper hover:border-paper transition-colors duration-300"
+              className="label-tag text-white/80 border-b border-white/40 pb-1 hover:text-white hover:border-white transition-colors duration-300"
             >
               Our Story
             </Link>
@@ -83,13 +88,13 @@ export default function Hero() {
 
           <motion.div
             variants={item}
-            className="mt-16 flex items-center gap-10 text-smoke/60 label-tag text-xs tracking-widest2"
+            className="mt-16 flex items-center gap-10 text-white/60 label-tag text-xs tracking-widest2"
           >
             <span>Cash on Delivery</span>
-            <span className="w-px h-3 bg-smoke/30" />
-            <span>Karachi Wide</span>
-            <span className="w-px h-3 bg-smoke/30" />
-            <span>Premium Cotton</span>
+            <span className="w-px h-3 bg-white/30" />
+            <span>Karachi</span>
+            <span className="w-px h-3 bg-white/30" />
+            <span>Premium Quality</span>
           </motion.div>
         </motion.div>
       </div>
