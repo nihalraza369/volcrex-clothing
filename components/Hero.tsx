@@ -34,7 +34,7 @@ export default function Hero() {
       />
 
       {/* Yellow overlay for text readability */}
-      <div className="absolute inset-0 bg-ink/50" />
+      <div className="absolute inset-0 bg-ink/20" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-10 pt-24 pb-20 w-full">
